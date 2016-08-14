@@ -1,0 +1,13 @@
+#mapid {
+  width:800px;
+  height: 400px;
+  position: relative;
+  outline: none;
+}
+
+.jumbotron {
+  background-color: #A1D490;
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+}
