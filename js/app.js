@@ -1,5 +1,6 @@
+// TO DO:  upon initialization, read in the './assets/data.csv' file and parse the data into a readible array (skip the first line because of comments) of searchable latitudes and longitudes.  Build function to generate a cluster of leaflet markers that can then be displayed onto the leaflet map and become the basis of the 'heat map'.
+
 // Generate the map
-// TO DO:  upon initialization, read in the './assets/data.csv' file and convert the data into a readible array.  build function to generate a cluster of leaflet markers that can then be displayed onto the leaflet map.
 var mymap = L.map('mapid').setView([35.87521, -78.84062], 10);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoianVsaWVoYXJyb3ciLCJhIjoiY2lyZTZhc3NqMDAyZGcwbmtqc2Zpa2c4ayJ9.jtoqLvEz44up8XlShevhbg', {
@@ -9,12 +10,10 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 
 
-// add popup indicating lat/long of the user selection, and bound the point by a 5000 meter circle
 // TO DO: store the lat/long of the user's selection on the map
-// TO DO: parse the CSV file into an array of searchable latitudes and longitudes
 // TO DO: identify all of those IP latitudes and longitudes that fall within 5000 meters of the user's selection
 
-
+// add popup indicating lat/long of the user selection, and bound the point by a 5000 meter circle
 var popup = L.popup();
 var circle = L.circle();
 function onMapClick(e) {
@@ -35,7 +34,7 @@ var circle = L.circle([35.87521, -78.84062], 5000, {
 }).addTo(mymap);
 
 
-// 
+// TO DO: build bounding function in js (not SQL) that returns all IPs within a specified radius of the selected point.
 // getBoundingCircle = function (centerPoint, radius) {
 //   var center_lat = centerPoint[0];
 //   var center_lng = centerPoint[1];
